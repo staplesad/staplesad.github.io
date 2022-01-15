@@ -1,0 +1,129 @@
+:root {
+  --color-bg: #FDE8E9;
+  --color-text-main: #000000;
+  --accent-color: #39A2AE;
+  --color-primary: #E3BAC6;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "Space Grotesk";
+  --font-family-header: "Space Grotesk";
+}
+
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+
+.footer {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  gap: 2%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+
+.background {
+  /* maybe have this in section above footer only and remove white divider?*/
+  background-color: var(--color-bg);
+  opacity: 0.8;
+  background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px),
+                      radial-gradient(#444cf7 0.5px, var(--color-bg) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0,10px 10px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+}
+
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--accent-color);
+  font-family: var(--font-family-header);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+.main-text {
+  margin: 1rem auto 0;
+}
+
+
+h1 {
+  font-size: 80%;
+  color: var(--accent-color);
+}
+
+h1:active {
+  transform: translateY(5px);
+  text-shadow: 10px -10px var(--color-primary);
+}
+
+/* Subheading */
+h2 {
+  color: var(--accent-color);
+  text-decoration: underline double;
+}
+
+.illustration:active {
+  transform: translateY(5px);
+}
+
+.flat_link {
+  text-decoration: none;
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  padding: 0.5rem ;
+  margin: 0.25rem 0.25rem;
+  color: var(--color-primary);
+}
+
+a.flat_link:visited {
+    color: var(--color-primary);
+}
+
+a.flat_link:hover {
+  background-color: var(--color-primary);
+  color: var(--accent-color);
+
+}
+
