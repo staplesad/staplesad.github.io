@@ -13,6 +13,7 @@
 * {
   box-sizing: border-box;
 }
+
 [hidden] {
   display: none !important;
 }
@@ -39,7 +40,6 @@
 }
 
 .background {
-  /* maybe have this in section above footer only and remove white divider?*/
   background-color: var(--color-bg);
   opacity: 0.8;
   background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px),
@@ -48,23 +48,35 @@
   background-position: 0 0,10px 10px;
 }
 
-body {
+html, body {
   font-family: var(--font-family);
   background-color: var(--color-bg);
 }
 
 .wrapper {
+  width:100%;
   min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.sidebar {
+  flex-grow: 1;
 }
 
 .content {
   display: flex;
+  flex-basis: 0;
+  flex-grow: 999;
+  place-items: center;
+  min-inline-size: 85%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
@@ -107,6 +119,23 @@ h2 {
 .illustration:active {
   transform: translateY(5px);
 }
+
+ul {
+  list-style-type: none;
+  border-left: 1rem solid var(--accent-color);
+  background-color: var(--color-primary);
+  padding: 0.1rem 1rem;
+}
+
+.sidebar_link {
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.1rem 0.05rem;
+  margin: 0.25rem 0.25rem;
+  color: var(--accent-color);
+  font-size: 120%;
+}
+
 
 .flat_link {
   text-decoration: none;

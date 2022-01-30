@@ -42,10 +42,18 @@
 
     <script src="./script.js" defer></script>
   </head>
-  <body class="background">
-    <div class="wrapper">
+  <body>
+    <div class="background wrapper">
+      <div class="sidebar">
+          <h2>About</h2>
+            <ul>
+              <li><a
+              class="sidebar_link"
+              href="data/SadhbhStapletonDoyle_CV_2022.pdf"
+              >CV</a></li>
+            </ul>
+      </div>
       <div class="content" role="main">
-        <!-- This is the start of content for our page -->
         <h1 class="title">Sadhbh's Website</h1>
         <a href="raven.html">
           <img
@@ -61,36 +69,28 @@
           </h2>
             <a class="flat_link" href="https://booksummarygen.ew.r.appspot.com/">Book Summary Generator</a>
             <a class="flat_link" href="https://haskell-reading-list.herokuapp.com/">Personal Reading List</a>
-          <h2>Personal Stuff</h2>
-          <!-- make this a responsive sidebar? so when screen is wide enough its on the side otherwise below other links? -->
-          <div>
-            <a
-              class="flat_link"
-              href="data/SadhbhStapletonDoyle_CV_2022.pdf"
-            >CV</a>
-          </div>
         </div>
+        <footer class="footer">
+          <div class="links">
+            <a class="btn" target="_top" href="https://github.com/staplesad">
+              <img
+                  src="data/github-icon.png"
+                  alt="github link"
+                  width="24"
+                  height="24"
+                  />
+            </a>
+            <a class="btn" target="_top" href="https://www.instagram.com/saivart/">
+              <img
+                  src="data/insta-icon.png"
+                  alt="instagram link"
+                  width="24"
+                  height="24"
+                  />
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
-    <footer class="footer">
-      <div class="links">
-        <a class="btn" target="_top" href="https://github.com/staplesad">
-          <img
-            src="data/github-icon.png"
-            alt="github link"
-            width="24"
-            height="24"
-          />
-        </a>
-        <a class="btn" target="_top" href="https://www.instagram.com/saivart/">
-          <img
-            src="data/insta-icon.png"
-            alt="instagram link"
-            width="24"
-            height="24"
-          />
-        </a>
-      </div>
-    </footer>
   </body>
 </html>
