@@ -156,3 +156,6 @@ a.flat_link:hover {
 
 }
 
+a:visited {
+  text-decoration: none;
+}
