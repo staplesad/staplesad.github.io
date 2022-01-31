@@ -3,6 +3,9 @@
   h1.title {
     font-size: 4em;
   }
+  div.sidebar {
+    padding-top: 0;
+  }
 }
 
 :root {
