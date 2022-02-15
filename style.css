@@ -68,6 +68,17 @@ html, body {
   padding: 0 auto;
 }
 
+.one-column {
+  display: flex;
+  flex-wrap:wrap;
+  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem;
+  padding: 0;
+}
+
 .sidebar {
   flex-grow: 1;
   flex-basis:8rem;
