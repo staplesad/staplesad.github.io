@@ -26,7 +26,6 @@
 
 
 .footer {
-  background-color: var(--color-bg);
   display: flex;
   justify-content: center;
   margin: 1rem auto 0;
@@ -81,7 +80,7 @@ html, body {
 
 .sidebar {
   flex-grow: 1;
-  flex-basis:8rem;
+  flex-basis:10em;
   padding-top: 5em;
 }
 
@@ -144,12 +143,16 @@ h2 {
   transform: translateY(5px);
 }
 
+.quarterly-newsletter{
+  padding: 1em 0.1em;
+}
+
 ul {
   list-style-type: none;
   border-left: 1rem solid var(--accent-color);
   background-color: var(--color-primary);
   padding: 0.1rem 1rem;
-  margin: auto 1em;
+  margin: 0.5em 1em;
 }
 
 .sidebar_link {
