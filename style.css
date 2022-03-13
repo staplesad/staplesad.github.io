@@ -143,8 +143,8 @@ h2 {
   transform: translateY(5px);
 }
 
-.quarterly-newsletter{
-  padding: 1em 0.1em;
+#quarterly-newsletter > input{
+  margin: 1em 0em;
 }
 
 #form-info {
