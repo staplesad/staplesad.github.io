@@ -147,6 +147,9 @@ h2 {
   padding: 1em 0.1em;
 }
 
+#form-info {
+  padding: 0 5em;
+}
 ul {
   list-style-type: none;
   border-left: 1rem solid var(--accent-color);
