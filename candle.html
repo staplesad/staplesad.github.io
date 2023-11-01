@@ -1,0 +1,39 @@
+<head>
+  <link href="candle.css" rel="stylesheet">
+</head>
+<body>
+  <script>
+    var timerId = null;
+    function resetState(){
+      var button = document.getElementsByTagName("button")[0];
+    }
+    function toggle() {
+      var wicks = document.getElementsByClassName("inner-wick");
+      var button = document.getElementsByTagName("button")[0];
+      for (let i=0; i< wicks.length; i++){
+        let wick = wicks[i];
+        const wick_state = wick.getAttribute("state");
+          if (wick_state === "off") {
+            console.log("off");
+            wick.setAttribute("state", "on");
+            button.innerText = "Extinguish";
+          } else if (wick_state === "on"){
+            console.log("on");
+            wick.setAttribute("state", "off");
+            button.innerText = "Light";
+          }
+      }
+    }
+  </script>
+  <div class="image">
+    <div class="wick">
+      <div class="inner-wick" state="off"></div>
+      <div class="inner-wick" state="off" style="animation-delay: 250ms;"></div>
+      <div class="inner-wick" state="off" style="animation-delay: 500ms;"></div>
+    </div>
+    <div id="candle"></div>
+    <hr>
+    <button onClick=toggle();>Light</button>
+    <div id="breath"></div>
+  </div>
+</body>
