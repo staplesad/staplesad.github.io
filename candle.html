@@ -1,15 +1,32 @@
 <head>
-  <link href="candle.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <script>
     var timerId = null;
-    function resetState(){
-      var button = document.getElementsByTagName("button")[0];
-    }
+    let breathInterval = 1;
+    var currentCount = 0;
+    let min=6;
+    let max=30;
     function toggle() {
+      let candleOut = Math.floor(Math.random() * (max-min)+min);
+      console.log(candleOut);
       var wicks = document.getElementsByClassName("inner-wick");
       var button = document.getElementsByTagName("button")[0];
+      var text_span = document.getElementById("breath");
+      function resetCandle(){
+        currentCount += 1;
+        if (currentCount == candleOut){
+          timerId = null;
+          text_span.innerHTML = "&nbsp;";
+          currentCount=0;
+          toggle();
+        }
+        else{
+          text_span.innerText = text_span.innerText + " .";
+          timerId = setTimeout(resetCandle, breathInterval*1000);
+        }
+      }
       for (let i=0; i< wicks.length; i++){
         let wick = wicks[i];
         const wick_state = wick.getAttribute("state");
@@ -17,23 +34,33 @@
             console.log("off");
             wick.setAttribute("state", "on");
             button.innerText = "Extinguish";
+            if (i==wicks.length-1){
+              timerId = setTimeout(resetCandle, 1000);
+            }
           } else if (wick_state === "on"){
             console.log("on");
             wick.setAttribute("state", "off");
             button.innerText = "Light";
+            if (timerId){
+              clearTimeout(timerId);
+              text_span.innerHTML = "&nbsp;";
+            }
           }
       }
     }
   </script>
-  <div class="image">
-    <div class="wick">
-      <div class="inner-wick" state="off"></div>
-      <div class="inner-wick" state="off" style="animation-delay: 250ms;"></div>
-      <div class="inner-wick" state="off" style="animation-delay: 500ms;"></div>
+  <div class="page">
+    <div class="image">
+      <div class="wick">
+        <div class="inner-wick" state="off"></div>
+        <div class="inner-wick" state="off" style="animation-delay: 250ms;"></div>
+        <div class="inner-wick" state="off" style="animation-delay: 500ms;"></div>
+      </div>
+      <div id="candle"></div>
+      <hr noshade>
+      <button onClick=toggle();>Light</button>
     </div>
-    <div id="candle"></div>
-    <hr>
-    <button onClick=toggle();>Light</button>
-    <div id="breath"></div>
+    <div id="breath">&nbsp;</div>
   </div>
+
 </body>
