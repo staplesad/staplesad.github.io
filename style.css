@@ -189,6 +189,7 @@ a.flat_link:hover {
 
 a, a:visited {
   text-decoration: none;
+  color: var(--accent-color)
 }
 
 tbody tr:nth-child(odd) {
