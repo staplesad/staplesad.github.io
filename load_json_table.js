@@ -10,8 +10,9 @@ function tableCreate(data) {
   names = Object.keys(data);
   names.sort();
   for (let i=0; i< names.length; i++) {
+    key = names[i]
     n = names[i][0].toUpperCase() + names[i].slice(1);
-    ev = data[n];
+    ev = data[key];
     const tr = tbl.insertRow();
     for (let j = 0; j < 2; j++) {
       const td = tr.insertCell();
