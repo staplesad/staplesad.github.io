@@ -212,4 +212,12 @@ th,
 td {
   padding: 20px;
 }
-
+button{
+  padding: 0;
+  border: none;
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  padding: 0.5rem ;
+  margin: 0.25rem 0.25rem;
+  color: var(--color-primary);
+}
