@@ -190,3 +190,23 @@ a.flat_link:hover {
 a, a:visited {
   text-decoration: none;
 }
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-primary);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--accent-color);
+}
+th,
+td {
+  padding: 20px;
+}
+
