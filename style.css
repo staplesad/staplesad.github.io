@@ -201,9 +201,11 @@ tbody tr:nth-child(even) {
 
 
 table {
-  width: 100%;
   border-collapse: collapse;
   border: 3px solid var(--accent-color);
+  margin-left: auto;
+  margin-right: auto;
+
 }
 th,
 td {
