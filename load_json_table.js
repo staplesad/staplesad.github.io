@@ -7,14 +7,18 @@ function tableCreate(data) {
   tbl = document.createElement('table');
   tbl.style.width = '100px';
 
-  for (const [name, ev] of Object.entries(data)) {
+  names = Object.keys(data);
+  names.sort();
+  for (let i=0; i< names.length; i++) {
+    n = names[i];
+    ev = data[n];
     const tr = tbl.insertRow();
     for (let j = 0; j < 2; j++) {
       const td = tr.insertCell();
       let value = ""
       if (j===0) {
         console.log("if")
-        value = name
+        value = n
       }
       else {
         console.log("else")
@@ -27,4 +31,4 @@ function tableCreate(data) {
 }
 
 data = load_json("./ev_table.json")
-data.then((a) => tableCreate(a))
+data.then((json) => tableCreate(json))
