@@ -1,0 +1,106 @@
+:root {
+  --color-bg: #FFF;
+  --color-text-main: #000000;
+  --accent-color: #39A2AE;
+  --color-primary: #E3BAC6;
+  --font-family: "Space Grotesk";
+  --font-family-header: "Space Grotesk";
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.grey {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  height: 100%;
+  max-width: 33%;
+}
+
+.table.explain > .explanation {
+  visibility: visible;
+}
+
+.table.explain .grey {
+  width: 100%;
+}
+
+.table.explain .gen-text {
+  display: inline-block;
+}
+
+.table.explain svg {
+  display: none;
+}
+
+.spread{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.table{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+}
+
+
+.grow-with-flex {
+  flex-grow:1;
+}
+
+svg {
+  cursor: default;
+  height: 100%;
+  max-width:100%;
+  width: 350px
+}
+svg text::selection {
+    background: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+}
+
+p.gen-text{
+  word-break: break-all;
+}
+button {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 45px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+  box-shadow:0px 0px 0px 1px var(--color-primary) inset;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  position: relative;
+
+}

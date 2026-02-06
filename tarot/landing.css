@@ -1,0 +1,60 @@
+:root {
+  --color-bg: #FDE8E9;
+  --color-text-main: #000000;
+  --accent-color: #39A2AE;
+  --color-primary: #E3BAC6;
+  --font-family: "Space Grotesk";
+  --font-family-header: "Space Grotesk";
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  opacity: 0.8;
+  background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px),
+                      radial-gradient(#444cf7 0.5px, var(--color-bg) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0,10px 10px;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 45px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+  box-shadow:0px 0px 0px 1px var(--color-primary) inset;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  position: relative;
+
+}
+
+* {
+  box-sizing:border-box;
+}
+
+input[type=text]{
+  background-color: var(--color-bg);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--color-text-main);
+  width: 100%
+}

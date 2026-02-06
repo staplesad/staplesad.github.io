@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Monoton:400" rel="stylesheet" type="text/css">
+  <link href="card.css" rel="stylesheet"/>
+  <script type="module" src="create_svg.js"></script>
+  <script type="module" src="generate_text.js"></script>
+  <title>Gen Card SVG</title>
+</head>
+<body>
+  <div class="table">
+    <div class="spread invisible explanation">
+      <h1>What does my head want?</h1>
+      <h1>What does my heart want?</h1>
+      <h1>What does my soul want?</h1>
+    </div>
+    <div class="spread grow-with-flex">
+      <div class="grey" id="card1">
+        <p class="hidden gen-text"></p>
+        <svg>
+        </svg>
+      </div>
+      <div class="grey" id="card2">
+        <p class="hidden gen-text"></p>
+        <svg>
+        </svg>
+      </div>
+      <div class="grey" id="card3">
+        <p class="hidden gen-text"></p>
+        <svg>
+        </svg>
+      </div>
+    </div>
+    <div class="footer">
+      <button onclick="toggle_visibility()">Explain</button>
+    </div>
+  </div>
+</body>
+</html>
